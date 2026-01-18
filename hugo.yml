@@ -1,0 +1,17 @@
+baseURL: "https://rekeeply.github.io/spec/"
+title: "Rekeeply Spec"
+
+defaultContentLanguage: en
+defaultContentLanguageInSubdir: true
+
+languages:
+  en:
+    languageName: "English"
+    weight: 1
+
+  ru:
+    languageName: "Русский"
+    weight: 2
+
+theme: book
+
