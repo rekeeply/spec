@@ -1,9 +1,9 @@
 ---
-title: "Authentication Boundary"
+title: "Граница аутентификации"
 weight: 22
 ---
 
-# Authentication Boundary
+# Граница аутентификации
 
 - правила аутентификации определяет core;
 - проверку учетных данных и выпуск сессии выполняет core;

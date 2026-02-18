@@ -1,8 +1,8 @@
 ---
-title: "Appendices"
+title: "Приложения"
 weight: 90
 ---
 
-# Appendices
+# Приложения
 
 Дополнительные материалы к спецификации Rekeeply.
