@@ -1,0 +1,49 @@
+Contributing to This Specification
+==================================
+
+This repository contains the specification source of truth.
+Contributions should keep the spec clear, consistent, and implementable.
+
+
+Before You Change Anything
+--------------------------
+
+* Confirm the intent of the change first.
+* Keep one change goal per commit.
+* If the change affects spec meaning, check `README.txt` for consistency.
+* Keep RU/EN content aligned when applicable.
+
+
+What to Update
+--------------
+
+* Core behavior changes -> `content/core-api/`
+* Client-specific behavior -> `content/clients/`
+* Entry-level framing -> `content/_index.*.md`
+* Supporting notes -> `content/appendices/`
+* Change history -> `content/changelog.*.md`
+
+
+Commit Message Rules
+--------------------
+
+Follow `COMMIT_CONVENTION.txt`.
+
+
+Validation
+----------
+
+* CI validates Pull Request titles: `.github/workflows/pr-title.yml`
+* Shared validator script: `scripts/check_change_title.sh`
+* Optional local helper: `.githooks/commit-msg`
+* Optional hook install:
+  `ln -sf ../../.githooks/commit-msg .git/hooks/commit-msg`
+
+
+Writing Expectations
+--------------------
+
+* Keep wording precise and non-ambiguous.
+* Separate core contract from client implementation details.
+* Avoid duplicate explanations across sections.
+* Prefer short, structured updates over long narrative text.

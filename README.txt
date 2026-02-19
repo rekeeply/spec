@@ -81,3 +81,18 @@ Use clear normative language and avoid implementation noise in core sections.
 * Clients: how a specific client implements the core contract
 * Keep sections concise and non-duplicated
 * Prefer structure and traceability over long narrative text
+
+
+Contributing
+------------
+
+Contribution rules are documented in:
+
+* Contributor guide: `CONTRIBUTING.txt`
+* Commit convention: `COMMIT_CONVENTION.txt`
+
+Validation:
+
+* CI validates Pull Request titles (`.github/workflows/pr-title.yml`)
+* Shared validation logic: `scripts/check_change_title.sh`
+* Local commit-msg hook is optional helper for early feedback

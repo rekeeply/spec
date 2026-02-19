@@ -1,0 +1,49 @@
+Commit Convention
+=================
+
+Use this commit format:
+
+    <type>(<scope>): <summary>
+
+Rules
+-----
+
+* Use English
+* Use imperative mood: add, update, refine, remove
+* Keep summary short and specific (<= 72 chars when possible)
+* One commit = one intent
+* If spec meaning changes, check README.txt in the same commit for consistency
+
+
+README.txt Note
+---------------
+
+* README.txt is a quick high-level overview, not a full normative spec
+* Keep README.txt aligned with current specification baseline
+
+
+Allowed Types
+-------------
+
+* docs      - specification content updates
+* ia        - information architecture and navigation structure changes
+* i18n      - RU/EN parity and translation updates
+* infra     - Hugo/CI/render pipeline and infrastructure changes
+* meta      - repository maintenance not changing spec meaning
+* editorial - wording and clarity updates without semantic change
+
+
+Scopes
+------
+
+* index
+* intro
+* core
+* clients
+* appendices
+* changelog
+* readme
+* nav
+* theme
+* hugo
+* ci

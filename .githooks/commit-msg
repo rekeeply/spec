@@ -1,0 +1,13 @@
+#!/bin/sh
+
+MSG_FILE="$1"
+FIRST_LINE=$(sed -n '1p' "$MSG_FILE")
+
+REPO_ROOT=$(git rev-parse --show-toplevel 2>/dev/null)
+
+if [ -z "$REPO_ROOT" ]; then
+  echo "Cannot determine repository root for commit title validation."
+  exit 1
+fi
+
+exec "$REPO_ROOT/scripts/check_change_title.sh" "$FIRST_LINE"
