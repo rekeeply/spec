@@ -1,0 +1,37 @@
+html[data-theme="light"] {
+  @include theme-light;
+}
+
+html[data-theme="dark"] {
+  @include theme-dark;
+}
+
+html[data-theme="reading"] {
+  @include theme-light;
+  --body-background: #f6f1e6;
+  --body-font-color: #2f2a24;
+  --gray-100: #efe7d8;
+  --gray-200: #e4dbc9;
+  --color-link: #0f4c81;
+  --color-visited-link: #5f3a8a;
+}
+
+.book-themes {
+  margin-top: 0.15rem;
+  padding-bottom: 0.6rem;
+  margin-bottom: 0.6rem;
+  border-bottom: 1px solid var(--gray-200);
+}
+
+.theme-mode-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-style: normal;
+  font-size: 0.95rem;
+}
+
+.book-menu-content .book-languages {
+  margin-top: 0.2rem;
+  margin-bottom: 0.2rem;
+}

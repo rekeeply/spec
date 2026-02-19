@@ -1,0 +1,70 @@
+<script>
+  (function () {
+    var STORAGE_KEY = 'spec-theme-mode';
+    var VALID_MODES = ['auto', 'light', 'dark', 'reading'];
+    var MODE_ICONS = {
+      auto: '🖥',
+      light: '☀',
+      dark: '🌙',
+      reading: '📖'
+    };
+
+    var root = document.documentElement;
+    var media = window.matchMedia ? window.matchMedia('(prefers-color-scheme: dark)') : null;
+    var labelEl = document.getElementById('theme-mode-label');
+    var iconEl = document.getElementById('theme-mode-icon');
+
+    function isValidMode(mode) {
+      return VALID_MODES.indexOf(mode) !== -1;
+    }
+
+    function getModeLabel(mode) {
+      var item = document.querySelector('[data-theme-mode="' + mode + '"]');
+      if (!item) return mode;
+      return item.textContent.trim();
+    }
+
+    function getActiveTheme(mode) {
+      if (mode === 'light' || mode === 'dark' || mode === 'reading') return mode;
+      return media && media.matches ? 'dark' : 'light';
+    }
+
+    function updateHeader(mode) {
+      if (!labelEl || !iconEl) return;
+      var prefix = labelEl.getAttribute('data-theme-prefix') || 'Theme';
+      labelEl.textContent = prefix + ': ' + getModeLabel(mode);
+      iconEl.textContent = MODE_ICONS[mode] || MODE_ICONS.auto;
+    }
+
+    function applyMode(mode) {
+      var normalized = isValidMode(mode) ? mode : 'auto';
+      root.setAttribute('data-theme', getActiveTheme(normalized));
+      localStorage.setItem(STORAGE_KEY, normalized);
+      updateHeader(normalized);
+    }
+
+    function getStoredMode() {
+      var mode = localStorage.getItem(STORAGE_KEY);
+      return isValidMode(mode) ? mode : 'auto';
+    }
+
+    applyMode(getStoredMode());
+
+    if (media && media.addEventListener) {
+      media.addEventListener('change', function () {
+        if (getStoredMode() === 'auto') applyMode('auto');
+      });
+    }
+
+    document.addEventListener('click', function (event) {
+      var link = event.target && event.target.closest('[data-theme-mode]');
+      if (!link) return;
+
+      event.preventDefault();
+      applyMode(link.getAttribute('data-theme-mode'));
+
+      var menuToggle = document.getElementById('theme-menu');
+      if (menuToggle) menuToggle.checked = false;
+    });
+  })();
+</script>

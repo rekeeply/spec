@@ -1,0 +1,19 @@
+<ul class="book-languages book-themes">
+  <li>
+    <input type="checkbox" id="theme-menu" class="toggle" />
+    <label for="theme-menu" class="flex">
+      <a role="button">
+        <span id="theme-mode-icon" class="book-icon theme-mode-icon" aria-hidden="true">🖥</span>
+        <span id="theme-mode-label" data-theme-prefix="{{ i18n "theme_label" }}">{{ i18n "theme_label" }}: {{ i18n "theme_system" }}</span>
+      </a>
+      <img src="{{ partial "docs/icon" "chevron-right" }}" class="book-icon" alt="{{ partial "docs/text/i18n" "Expand" }}" />
+    </label>
+
+    <ul>
+      <li><a href="#" class="flex flex-auto" data-theme-mode="auto">{{ i18n "theme_system" }}</a></li>
+      <li><a href="#" class="flex flex-auto" data-theme-mode="light">{{ i18n "theme_light" }}</a></li>
+      <li><a href="#" class="flex flex-auto" data-theme-mode="dark">{{ i18n "theme_dark" }}</a></li>
+      <li><a href="#" class="flex flex-auto" data-theme-mode="reading">{{ i18n "theme_reading" }}</a></li>
+    </ul>
+  </li>
+</ul>
