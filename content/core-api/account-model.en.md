@@ -9,7 +9,8 @@ weight: 23
 
 - Core implementations MUST include `Account` as a first-class domain entity.
 - One account MUST own zero or more libraries; each library MUST belong to exactly one account.
-- One active session MUST operate on exactly one active library.
+- One active session MUST be bound to exactly one account.
+- Library-scoped operations in one active session MUST operate on exactly one active library.
 
 ## Account Attributes
 
@@ -28,6 +29,7 @@ weight: 23
 ## Session and Access Rules
 
 - After `unlock`, session context MUST be bound to one `account_id`.
+- Raw-scoped operations MAY run without selecting an active library.
 - Cross-account operations in one active session MUST be rejected.
 - Write operations on domain entities MUST be rejected while session is locked.
 - Export/import operations MUST run in the active account context.

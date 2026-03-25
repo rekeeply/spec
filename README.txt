@@ -50,14 +50,15 @@ Optional sync mode:
     |  Local Vault   | <-------------------> | Remote Service |
     +----------------+                       +----------------+
 
-Session rule:
+Session rules:
 
     account
       |
       +-- library A
       +-- library B
 
-    active session -> exactly one active library
+    active session -> exactly one account context
+    library operations -> exactly one active library
 
 
 Repository Structure

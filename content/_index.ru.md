@@ -39,7 +39,7 @@ weight: 10
     +----------------+                       +----------------+
 
 
-Правило сессии
+Правила сессии
 --------------
 
     account
@@ -47,5 +47,11 @@ weight: 10
       +-- library A
       +-- library B
 
-    active session -> exactly one active library
+    active session -> exactly one account context
+    library operations -> exactly one active library
+
+Базовая модель хранения
+-----------------------
+
+    Library (structured) + Raw (quick capture)
 ```

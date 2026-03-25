@@ -15,14 +15,15 @@ weight: 21
 
 - same core domain logic;
 - authentication is mandatory;
-- one active session works with only one active library;
+- one active session is bound to one account;
+- library-scoped operations work with only one active library;
 - clients use the core contract, not direct DB file access.
 
 ## Session Lifecycle
 
 - `init`: initial local vault setup and first library creation;
 - `unlock`: user authentication and opening a working session;
-- `active`: command execution within one active library context;
+- `active`: command execution in active session context (library-scoped or account-scoped);
 - `switch-library`: explicit active library switch inside a session;
 - `auto-lock`: automatic lock on inactivity timeout;
 - `manual lock/logout`: explicit lock or session termination.
@@ -31,7 +32,7 @@ weight: 21
 
 - local DB is the default source of user operations;
 - synchronization is asynchronous and does not block user actions;
-- synchronization is scoped per library;
+- synchronization supports both library-scoped data and account-scoped data;
 - in offline mode, core continues to operate and sync is deferred;
 - conflicts are resolved by a deterministic policy (defined in a separate section);
 - sync data transfer must use a secure channel.

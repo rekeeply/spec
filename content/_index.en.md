@@ -39,13 +39,19 @@ Optional sync mode
     +----------------+                       +----------------+
 
 
-Session rule
-------------
+Session rules
+-------------
 
     account
       |
       +-- library A
       +-- library B
 
-    active session -> exactly one active library
+    active session -> exactly one account context
+    library operations -> exactly one active library
+
+Storage baseline
+----------------
+
+    Library (structured) + Raw (quick capture)
 ```

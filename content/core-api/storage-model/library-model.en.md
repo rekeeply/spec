@@ -1,6 +1,6 @@
 ---
 title: "Library Model"
-weight: 24
+weight: 10
 ---
 
 # Library Model
