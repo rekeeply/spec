@@ -5,7 +5,7 @@ weight: 25
 
 # Storage Model
 
-Core storage model consists of two primary domains: [Library](library-model) and [Raw](raw-model).
+Core storage model consists of two primary domains: [Library](library-model/) and [Raw](raw-model/).
 
 Canonical terms are fixed in the [Glossary](/appendices/glossary/).
 

@@ -1,6 +1,7 @@
 ---
 title: "Library Model"
 weight: 10
+BookCollapseSection: true
 ---
 
 # Library Model
@@ -10,14 +11,21 @@ weight: 10
 - Core implementations MUST include `Library` as a first-class domain entity.
 - One library MUST belong to exactly one account.
 - One active session MUST operate on exactly one `active_library_id`.
+- `Library` MUST support both study-oriented and storage-oriented content.
 
-## Library Attributes
+## Content Entry Model
 
-- `id` MUST exist and MUST be immutable.
-- `account_id` MUST exist and MUST reference the owning account.
-- `name` MUST exist.
-- `status` MUST exist.
-- Additional metadata MAY exist and is implementation-defined.
+- Library entries MUST include a content type (`content_type`).
+- The baseline content type set MAY include standard types (`book`, `article`, `video`, `movie`) and MUST allow custom types.
+- Progress tracking MUST be optional and MUST NOT be required for all content entries.
+
+## Common Entry States and Flags
+
+- Each library entry MUST have `status` from the set: `inbox | todo | in_progress | skimmed | done | dropped`.
+- `inbox` SHOULD be the default initial status for newly created entries.
+- Each library entry MAY have `priority` from the set: `low | medium | high`.
+- Each library entry MAY have independent flags `favorite` and `archived`.
+- `status`, `priority`, `favorite`, and `archived` MUST be type-independent attributes.
 
 ## Session Context Rules
 
@@ -37,6 +45,13 @@ weight: 10
 - Library creation without a valid `account_id` MUST be rejected.
 - Cross-library access in a single scoped operation MUST be rejected.
 - Removing or archiving a library MUST preserve referential consistency.
+
+## Related Sections
+
+- [Content Typing](content-typing/)
+- [Content Fields](content-fields/)
+- [Field Types](field-types/)
+- [Type-Specific Fields](type-specific-fields/)
 
 ## Non-Goals
 
