@@ -55,6 +55,7 @@ weight: 17
 - `edit-field`
   - Обновляет редактируемые атрибуты поля (`name`, `required`, default, validation, visibility/order).
   - Внутренний `key` ДОЛЖЕН оставаться неизменяемым.
+  - Прямое изменение `field_type` через `edit-field` НЕ ДОЛЖНО применяться.
 
 - `archive-field` / `unarchive-field`
   - Отключает/включает поле для активного использования в формах.
@@ -66,8 +67,44 @@ weight: 17
 
 ## Правило миграции
 
-- Любое изменение схемы, которое может инвалидировать уже сохраненные значения, ДОЛЖНО выполняться как явная migration-операция.
+- Любое изменение `field_type` ДОЛЖНО выполняться как явная migration-операция.
+- Migration flow обязателен всегда для изменений `field_type`, даже если значений поля пока нет.
+- Migration flow ДОЛЖЕН/РЕКОМЕНДУЕТСЯ создавать/назначать target-тип поля, выполнять конвертацию и применять результат только после явного подтверждения.
+- Предпроверка migration ДОЛЖНА показывать отчет по затронутым записям.
 - Migration-операция ДОЛЖНА выдавать отчет по затронутым записям и итоговому статусу.
+
+## Baseline переходов field_type
+
+- Переходы типов полей делятся на `safe`, `conditional` и `forbidden`.
+
+Safe-переходы:
+
+- `text -> long_text`
+- `integer -> decimal`
+- `date -> datetime`
+- `ref -> ref_list`
+
+Conditional-переходы:
+
+- `long_text -> text`
+- `decimal -> integer`
+- `datetime -> date`
+- `text -> integer | decimal | date | datetime | duration | url | email | phone`
+- `text <-> enum | multi_enum`
+- `ref_list -> ref`
+- `json -> any`
+- `any -> json`
+
+Forbidden-переходы:
+
+- `ref | ref_list -> numeric | date | boolean`
+- `enum | multi_enum -> ref | ref_list`
+- `file_ref -> numeric | date | boolean`
+
+Политика для conditional-переходов:
+
+- Migration ДОЛЖНА предлагать явный выбор политики для conditional-переходов.
+- Baseline варианты политики: `fail_on_error` или `set_null_on_error`.
 
 ## Правило границы библиотеки
 

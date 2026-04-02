@@ -55,6 +55,7 @@ weight: 17
 - `edit-field`
   - Updates editable field schema attributes (`name`, `required`, defaults, validation, visibility/order).
   - Internal `key` MUST remain immutable.
+  - Direct `field_type` change MUST NOT be applied in `edit-field`.
 
 - `archive-field` / `unarchive-field`
   - Disables/enables field for active usage in forms.
@@ -66,8 +67,44 @@ weight: 17
 
 ## Migration Rule
 
-- Any schema change that can invalidate existing stored values MUST run as explicit migration operation.
+- Any `field_type` change MUST run as explicit migration operation.
+- Migration flow is always required for `field_type` changes, even when no values are currently stored.
+- Migration flow SHOULD create/assign target field type, run conversion, and apply result after explicit confirmation.
+- Migration pre-check MUST report affected entries.
 - Migration operation MUST report affected entries and final status.
+
+## Field Type Transition Baseline
+
+- Field type transitions are classified as `safe`, `conditional`, or `forbidden`.
+
+Safe transitions:
+
+- `text -> long_text`
+- `integer -> decimal`
+- `date -> datetime`
+- `ref -> ref_list`
+
+Conditional transitions:
+
+- `long_text -> text`
+- `decimal -> integer`
+- `datetime -> date`
+- `text -> integer | decimal | date | datetime | duration | url | email | phone`
+- `text <-> enum | multi_enum`
+- `ref_list -> ref`
+- `json -> any`
+- `any -> json`
+
+Forbidden transitions:
+
+- `ref | ref_list -> numeric | date | boolean`
+- `enum | multi_enum -> ref | ref_list`
+- `file_ref -> numeric | date | boolean`
+
+Conditional transition policy:
+
+- Migration MUST provide explicit policy choice for conditional transitions.
+- Baseline policy options: `fail_on_error` or `set_null_on_error`.
 
 ## Library Boundary Rule
 
