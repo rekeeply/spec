@@ -8,6 +8,9 @@ BookCollapseSection: true
 
 Раздел содержит baseline type-specific полей для каждого типа контента.
 
+Глобальное правило: type-specific поля ниже перечисляются без деления на обязательные/опциональные.
+Ни одно type-specific поле не является обязательным в baseline, пока пользовательская схема не пометит его как required.
+
 - [book](book/)
 - [article](article/)
 - [game](game/)

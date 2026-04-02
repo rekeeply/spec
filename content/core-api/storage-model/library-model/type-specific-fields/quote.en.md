@@ -5,12 +5,9 @@ weight: 15
 
 # quote
 
-Required:
+Fields:
 
 - `quote_text` (`long_text`) - captured quote text or idea statement.
-
-Optional:
-
 - `quoted_author` (`text`) - person/source author of the quote.
 - `source_title` (`text`) - title of the source work.
 - `source_locator` (`text`) - source pointer (page, timestamp, chapter, URL fragment).

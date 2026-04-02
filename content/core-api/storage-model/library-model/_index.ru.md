@@ -51,6 +51,8 @@ BookCollapseSection: true
 - [Типизация контента](content-typing/)
 - [Поля контента](content-fields/)
 - [Типы полей](field-types/)
+- [Теги](tags/)
+- [Действия библиотеки](library-actions/)
 - [Type-Specific поля](type-specific-fields/)
 
 ## Что не входит в модель библиотеки

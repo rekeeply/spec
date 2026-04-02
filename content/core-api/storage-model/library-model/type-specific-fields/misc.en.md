@@ -5,11 +5,7 @@ weight: 20
 
 # misc
 
-Required:
-
-- no additional required type-specific fields.
-
-Optional:
+Fields:
 
 - `kind_note` (`text`) - short note describing what this entry represents.
 - `external_id` (`text`) - optional external identifier.

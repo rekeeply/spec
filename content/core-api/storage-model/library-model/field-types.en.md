@@ -66,10 +66,6 @@ weight: 13
   - Validation: `options` are required; all stored values MUST exist in options; `min_selected`/`max_selected` are optional.
   - Default: `default_value` (optional array of option `value_key`).
 
-- `tag_list` - tag array.
-  - Validation: `max_items` (optional), `max_tag_length` (optional), normalization rules are implementation-defined.
-  - Default: `default_value` (optional array of tags).
-
 - `ref` - single reference to another content entry.
   - Validation: referenced entry MUST exist in the same library.
   - Default: `default_value` (optional reference id).

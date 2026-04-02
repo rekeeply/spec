@@ -5,13 +5,10 @@ weight: 13
 
 # screen
 
-Required:
+Fields:
 
 - `release_year` (`integer`) - release year.
 - `format` (`text` or `enum`) - screen format context (e.g., film/series/anime/animation).
-
-Optional:
-
 - `original_title` (`text`) - title in original language.
 - `country` (`text`) - production country.
 - `director` (`text`) - director.

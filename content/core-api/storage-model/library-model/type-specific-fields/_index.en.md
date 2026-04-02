@@ -8,6 +8,9 @@ BookCollapseSection: true
 
 This section contains type-specific field baselines per content type.
 
+Global rule: type-specific fields are listed here without required/optional split.
+No type-specific field is mandatory by baseline unless user-defined schema marks it required.
+
 - [book](book/)
 - [article](article/)
 - [game](game/)

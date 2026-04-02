@@ -5,13 +5,10 @@ weight: 13
 
 # screen
 
-Обязательные:
+Поля:
 
 - `release_year` (`integer`) - год релиза.
 - `format` (`text` или `enum`) - формат экранного контента (например, film/series/anime/animation).
-
-Опциональные:
-
 - `original_title` (`text`) - название на языке оригинала.
 - `country` (`text`) - страна производства.
 - `director` (`text`) - режиссер.

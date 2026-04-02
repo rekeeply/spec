@@ -5,13 +5,10 @@ weight: 17
 
 # resource
 
-Обязательные:
+Поля:
 
 - `resource_name` (`text`) - основное название ресурса.
 - `resource_kind` (`text` или `enum`) - уточняющий вид ресурса в контексте подтипа.
-
-Опциональные:
-
 - `provider` (`text`) - владелец/провайдер ресурса.
 - `official_url` (`url`) - основная ссылка на ресурс.
 - `access_model` (`enum`) - модель доступа (free/paid/freemium/private).

@@ -5,13 +5,10 @@ weight: 17
 
 # resource
 
-Required:
+Fields:
 
 - `resource_name` (`text`) - primary resource title/name.
 - `resource_kind` (`text` or `enum`) - resource kind descriptor inside subtype context.
-
-Optional:
-
 - `provider` (`text`) - provider/owner organization.
 - `official_url` (`url`) - primary resource URL.
 - `access_model` (`enum`) - access mode (free/paid/freemium/private).

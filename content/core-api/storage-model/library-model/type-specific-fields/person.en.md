@@ -5,14 +5,11 @@ weight: 16
 
 # person
 
-Required:
+Fields:
 
 - `display_name` (`text`) - primary person name used in library views.
-
-Optional:
-
 - `full_name` (`text`) - full legal/full public name.
-- `aliases` (`tag_list`) - alternative names/aliases.
+- `aliases` (`long_text`) - alternative names/aliases.
 - `born_year` (`integer`) - birth year.
 - `died_year` (`integer`) - death year when applicable.
 - `nationality` (`text`) - nationality/country identity marker.

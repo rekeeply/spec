@@ -5,12 +5,9 @@ weight: 19
 
 # audio
 
-Обязательные:
+Поля:
 
 - `speaker_or_author` (`text`) - основной спикер/автор/ведущий.
-
-Опциональные:
-
 - `original_title` (`text`) - название на языке оригинала.
 - `release_year` (`integer`) - год релиза/публикации.
 - `duration_seconds` (`duration`) - длительность аудио.

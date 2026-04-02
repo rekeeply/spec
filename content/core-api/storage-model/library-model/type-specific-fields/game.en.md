@@ -5,13 +5,10 @@ weight: 12
 
 # game
 
-Required:
+Fields:
 
 - `platform` (`text`) - primary runtime platform/environment (e.g., PC, PlayStation, Xbox, Nintendo, board).
 - `release_year` (`integer`) - initial release year.
-
-Optional:
-
 - `developer` (`text`) - game developer/studio.
 - `publisher` (`text`) - game publisher.
 - `distribution_source` (`text` or `enum`) - source/store where game is available or owned (e.g., Steam, Epic Games Store, PS Store, Xbox Store, Nintendo eShop).

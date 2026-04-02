@@ -51,6 +51,8 @@ BookCollapseSection: true
 - [Content Typing](content-typing/)
 - [Content Fields](content-fields/)
 - [Field Types](field-types/)
+- [Tags](tags/)
+- [Library Actions](library-actions/)
 - [Type-Specific Fields](type-specific-fields/)
 
 ## Non-Goals

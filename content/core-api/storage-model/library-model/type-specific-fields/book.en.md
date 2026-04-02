@@ -5,13 +5,10 @@ weight: 10
 
 # book
 
-Required:
+Fields:
 
 - `author` (`text`) - primary author of the book.
 - `published_year` (`integer`) - publication year of the edition used.
-
-Optional:
-
 - `original_title` (`text`) - title in the original language.
 - `co_authors` (`text` or `long_text`) - additional authors/co-authors.
 - `language` (`text`) - language of the specific edition/content.

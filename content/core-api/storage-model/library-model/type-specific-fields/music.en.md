@@ -5,12 +5,9 @@ weight: 18
 
 # music
 
-Required:
+Fields:
 
 - `artist` (`text`) - primary artist/composer.
-
-Optional:
-
 - `original_title` (`text`) - original track/release title.
 - `album_title` (`text`) - parent album title.
 - `release_year` (`integer`) - release year.

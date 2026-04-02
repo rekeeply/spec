@@ -10,7 +10,7 @@ weight: 11
 - `content_type` is mandatory; entries MUST NOT be created without a type.
 - `content_subtype` is optional.
 - Manual entry creation MUST start with selecting `content_type`.
-- After type selection, clients MAY allow selecting subtype and filling fields.
+- After type selection, subtype and other fields may be filled later.
 
 ## Default and Recommended Set
 

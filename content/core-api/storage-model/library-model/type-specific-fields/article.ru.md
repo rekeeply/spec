@@ -5,13 +5,10 @@ weight: 11
 
 # article
 
-Обязательные:
+Поля:
 
 - `author` (`text`) - основной автор статьи.
 - `published_year` (`integer`) - год публикации.
-
-Опциональные:
-
 - `journal_or_source` (`text`) - источник публикации (журнал/сайт/платформа).
 - `publication_date` (`date`) - точная дата публикации.
 - `doi` (`text`) - DOI идентификатор.

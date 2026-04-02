@@ -5,12 +5,9 @@ weight: 19
 
 # audio
 
-Required:
+Fields:
 
 - `speaker_or_author` (`text`) - primary speaker/author/host.
-
-Optional:
-
 - `original_title` (`text`) - title in original language.
 - `release_year` (`integer`) - release/publication year.
 - `duration_seconds` (`duration`) - audio duration.

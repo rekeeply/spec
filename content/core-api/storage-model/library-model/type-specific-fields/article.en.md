@@ -5,13 +5,10 @@ weight: 11
 
 # article
 
-Required:
+Fields:
 
 - `author` (`text`) - primary author of the article.
 - `published_year` (`integer`) - publication year.
-
-Optional:
-
 - `journal_or_source` (`text`) - publication source (journal/site/platform).
 - `publication_date` (`date`) - exact publication date.
 - `doi` (`text`) - DOI identifier.

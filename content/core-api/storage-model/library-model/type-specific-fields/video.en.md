@@ -5,20 +5,17 @@ weight: 14
 
 # video
 
-Required:
+Fields:
 
 - `creator_or_channel` (`text`) - primary creator, author, or channel.
 - `release_year` (`integer`) - release/publication year.
-
-Optional:
-
 - `original_title` (`text`) - title in original language.
 - `duration_minutes` (`integer`) - video duration in minutes.
 - `platform` (`text`) - hosting platform (e.g., YouTube, Vimeo, Twitch).
 - `series_name` (`text`) - series/show name if video belongs to a series.
 - `episode_label` (`text`) - episode/part label.
 - `language` (`text`) - spoken/content language.
-- `subtitles` (`tag_list`) - subtitle languages/availability.
+- `subtitles` (`multi_enum`) - subtitle languages/availability.
 - `published_at` (`datetime`) - exact publication timestamp.
 - `age_rating` (`text`) - age suitability marker.
 - `view_count_snapshot` (`integer`) - optional captured view count.

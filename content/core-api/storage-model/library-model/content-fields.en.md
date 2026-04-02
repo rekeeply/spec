@@ -19,6 +19,7 @@ weight: 12
 - `library_id` - owning library identifier.
 - `created_at` - creation timestamp.
 - `updated_at` - last update timestamp.
+- `status_changed_at` - timestamp of last status change.
 
 ### `user_editable`
 
@@ -31,7 +32,6 @@ weight: 12
 - `archived` - independent archive flag.
 - `parent_content_id` - optional parent relation.
 - `source_url` - optional source link.
-- `tags` - optional user tags.
 - `summary` - optional short description.
 
 ### `computed`
@@ -44,6 +44,12 @@ weight: 12
 
 - Clients MUST enforce non-editability for `system` and `computed` fields.
 - Core MUST maintain consistency of all `computed` fields.
+- On creation, `status` SHOULD be auto-set to `inbox`.
+- On creation, `priority` SHOULD be empty by default unless explicitly provided.
+- Status changes SHOULD update `status_changed_at` and SHOULD NOT update `updated_at`.
+- Favorite flag changes SHOULD NOT update `updated_at`.
+- User-editable fields other than `content_type` and `status` are optional at creation time and may be filled later.
+- Type-specific fields are non-mandatory by baseline and become required only when user-defined schema marks them required.
 - Implementations MAY add extra fields in any class as implementation-defined extensions.
 
 ## Related Sections

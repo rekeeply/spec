@@ -5,20 +5,17 @@ weight: 14
 
 # video
 
-Обязательные:
+Поля:
 
 - `creator_or_channel` (`text`) - основной автор/креатор или канал.
 - `release_year` (`integer`) - год релиза/публикации.
-
-Опциональные:
-
 - `original_title` (`text`) - название на языке оригинала.
 - `duration_minutes` (`integer`) - длительность видео в минутах.
 - `platform` (`text`) - платформа размещения (например, YouTube, Vimeo, Twitch).
 - `series_name` (`text`) - название серии/шоу, если видео серийное.
 - `episode_label` (`text`) - обозначение выпуска/части.
 - `language` (`text`) - язык контента/озвучки.
-- `subtitles` (`tag_list`) - языки/наличие субтитров.
+- `subtitles` (`multi_enum`) - языки/наличие субтитров.
 - `published_at` (`datetime`) - точное время публикации.
 - `age_rating` (`text`) - маркер возрастных ограничений.
 - `view_count_snapshot` (`integer`) - сохраненный срез количества просмотров.

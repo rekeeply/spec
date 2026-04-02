@@ -5,13 +5,10 @@ weight: 12
 
 # game
 
-Обязательные:
+Поля:
 
 - `platform` (`text`) - основная платформа/среда запуска (например, PC, PlayStation, Xbox, Nintendo, board).
 - `release_year` (`integer`) - год первоначального релиза.
-
-Опциональные:
-
 - `developer` (`text`) - разработчик/студия.
 - `publisher` (`text`) - издатель игры.
 - `distribution_source` (`text` или `enum`) - источник/магазин, где игра доступна или приобретена (например, Steam, Epic Games Store, PS Store, Xbox Store, Nintendo eShop).
