@@ -48,6 +48,7 @@ weight: 12
 - On creation, `priority` SHOULD be empty by default unless explicitly provided.
 - Status changes SHOULD update `status_changed_at` and SHOULD NOT update `updated_at`.
 - Favorite flag changes SHOULD NOT update `updated_at`.
+- Archived flag changes SHOULD NOT update `updated_at`.
 - User-editable fields other than `content_type` and `status` are optional at creation time and may be filled later.
 - Type-specific fields are non-mandatory by baseline and become required only when user-defined schema marks them required.
 - Implementations MAY add extra fields in any class as implementation-defined extensions.

@@ -7,7 +7,7 @@ weight: 16
 
 Fields:
 
-- `display_name` (`text`) - primary person name used in library views.
+- `name` (`text`) - primary person name.
 - `full_name` (`text`) - full legal/full public name.
 - `aliases` (`long_text`) - alternative names/aliases.
 - `born_year` (`integer`) - birth year.

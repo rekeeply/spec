@@ -16,7 +16,7 @@ BookCollapseSection: true
 ## Content Entry Model
 
 - Library entries MUST include a content type (`content_type`).
-- The baseline content type set MAY include standard types (`book`, `article`, `video`, `movie`) and MUST allow custom types.
+- The baseline content type set is defined in [Content Typing](content-typing/) and MUST allow custom types.
 - Progress tracking MUST be optional and MUST NOT be required for all content entries.
 
 ## Common Entry States and Flags
@@ -53,6 +53,7 @@ BookCollapseSection: true
 - [Field Types](field-types/)
 - [Tags](tags/)
 - [Library Actions](library-actions/)
+- [Schema Actions](schema-actions/)
 - [Type-Specific Fields](type-specific-fields/)
 
 ## Non-Goals
