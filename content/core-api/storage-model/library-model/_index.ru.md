@@ -54,6 +54,9 @@ BookCollapseSection: true
 - [Теги](tags/)
 - [Действия библиотеки](library-actions/)
 - [Действия схемы](schema-actions/)
+- [Пресеты](search-presets/)
+- [Коллекции](collections/)
+- [Поведение поиска](search-behavior/)
 - [Поля по типам](type-specific-fields/)
 
 ## Что не входит в модель библиотеки

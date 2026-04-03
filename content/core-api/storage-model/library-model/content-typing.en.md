@@ -130,3 +130,4 @@ Purpose: fallback type for entries that do not fit existing default types.
 - Users MUST be able to rename and adjust custom type/subtype sets.
 - For both default and custom type/subtype sets, users MUST be able to customize field sets.
 - Field definitions and field data types are specified in a separate section.
+- Type/subtype taxonomy and field schemas MUST be included in library export/import scope.

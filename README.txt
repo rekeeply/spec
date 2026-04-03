@@ -60,6 +60,26 @@ Session rules:
     active session -> exactly one account context
     library operations -> exactly one active library
 
+Storage baseline:
+
+    Library (structured) + Raw (quick capture)
+
+Library baseline:
+
+    content_type required
+    content_subtype optional
+    status required (default: inbox)
+    priority optional (default: empty)
+
+    status changes -> update status_changed_at, not updated_at
+    favorite/archive toggles -> do not update updated_at
+
+Transfer baseline:
+
+    library export/import extension: *.rkl
+    includes library-scoped data only (Raw excluded by baseline)
+    taxonomy travels with library (types/subtypes/field schema/tags)
+
 
 Repository Structure
 --------------------
@@ -68,6 +88,7 @@ Top-level documentation sections:
 
 * content/_index.*.md                 - Specification landing page
 * content/core-api/                   - Core contracts and runtime behavior
+* content/core-api/storage-model/     - Library/Raw models and storage contracts
 * content/clients/                    - Client-specific documentation
 * content/appendices/                 - Supporting material
 * content/changelog.*.md              - Spec change history

@@ -54,6 +54,9 @@ BookCollapseSection: true
 - [Tags](tags/)
 - [Library Actions](library-actions/)
 - [Schema Actions](schema-actions/)
+- [Presets](search-presets/)
+- [Collections](collections/)
+- [Search Behavior](search-behavior/)
 - [Type-Specific Fields](type-specific-fields/)
 
 ## Non-Goals
