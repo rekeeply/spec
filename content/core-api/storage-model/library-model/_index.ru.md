@@ -54,7 +54,7 @@ BookCollapseSection: true
 - [Теги](tags/)
 - [Действия библиотеки](library-actions/)
 - [Действия схемы](schema-actions/)
-- [Type-Specific поля](type-specific-fields/)
+- [Поля по типам](type-specific-fields/)
 
 ## Что не входит в модель библиотеки
 

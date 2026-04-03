@@ -56,4 +56,4 @@ weight: 12
 ## Связанные разделы
 
 - [Типы полей](field-types/)
-- [Type-Specific поля](type-specific-fields/)
+- [Поля по типам](type-specific-fields/)
