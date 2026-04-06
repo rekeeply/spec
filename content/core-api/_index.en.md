@@ -14,3 +14,4 @@ Platform-agnostic specification of core runtime behavior.
 - Clients (CLI and others) MUST consume this contract and MUST NOT redefine core domain entities.
 - Practical end-user usage is documented in client sections.
 - Library transfer baseline is defined in [Library Transfer Format](../library-transfer-format/).
+- Settings baseline is defined in [Settings Model](../settings-model/).

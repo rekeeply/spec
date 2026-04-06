@@ -24,8 +24,8 @@ weight: 15
 ## Content Association
 
 - Content-tag relation MUST support multiple tags per content entry.
-- Tag assignment is edited in a dedicated `Tags` block inside content card UI.
-- Tag assignment UI SHOULD support selecting existing tags and creating new tags inline.
+- Core MUST support assigning existing tags to content entries and unassigning tags from content entries.
+- Core SHOULD support creating tags and assigning them in one logical operation.
 
 ## Editing Rules
 
