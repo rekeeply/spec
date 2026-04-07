@@ -42,6 +42,13 @@ weight: 12
 - `last_activity_at` - derived last activity timestamp.
 - `is_completed` - derived completion flag from status.
 
+## Attachment Model
+
+- Content entries MAY have multiple linked attachments.
+- Attachment links are modeled as related entities, not as one-off fixed fields.
+- Attachment baseline fields: `id`, `content_id`, `uri`, `name` (optional), `mime` (optional), `size` (optional), `created_at`.
+- Attachment export/import baseline dataset file: `attachments.ndjson`.
+
 ## Rules
 
 - Clients MUST enforce non-editability for `system` and `computed` fields.

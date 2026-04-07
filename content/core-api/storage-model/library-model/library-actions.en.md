@@ -92,3 +92,14 @@ weight: 16
   - Moves all links from source tag to target tag.
   - Duplicates are deduplicated.
   - Source tag is hard-deleted.
+
+## Attachment Actions
+
+- `add-attachment`
+  - Adds file attachment reference to content entry.
+
+- `remove-attachment`
+  - Removes attachment reference from content entry.
+
+- `update-attachment`
+  - Updates attachment metadata (`name`, `mime`, `uri`, etc.).
