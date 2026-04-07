@@ -35,6 +35,11 @@ weight: 16
   - Sets/changes/clears `priority`.
   - Updates `updated_at`.
 
+- `set-rating`
+  - Sets/changes/clears `rating`.
+  - Rating value range is `1..10` when provided.
+  - Updates `updated_at`.
+
 - `toggle-favorite`
   - Sets `favorite=true/false`.
   - MUST NOT update `updated_at`.

@@ -28,6 +28,7 @@ weight: 12
 - `title` - entry title.
 - `status` - `inbox | todo | in_progress | skimmed | done | dropped`.
 - `priority` - `low | medium | high`.
+- `rating` - optional integer rating in range `1..10`.
 - `favorite` - independent favorite flag.
 - `archived` - independent archive flag.
 - `parent_content_id` - optional parent relation.
@@ -49,6 +50,7 @@ weight: 12
 - Status changes SHOULD update `status_changed_at` and SHOULD NOT update `updated_at`.
 - Favorite flag changes SHOULD NOT update `updated_at`.
 - Archived flag changes SHOULD NOT update `updated_at`.
+- If `rating` is provided, value MUST be in range `1..10`.
 - User-editable fields other than `content_type` and `status` are optional at creation time and may be filled later.
 - Type-specific fields are non-mandatory by baseline and become required only when user-defined schema marks them required.
 - Implementations MAY add extra fields in any class as implementation-defined extensions.
