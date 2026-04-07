@@ -29,6 +29,7 @@ weight: 12
 - `status` - `inbox | todo | in_progress | skimmed | done | dropped`.
 - `priority` - `low | medium | high`.
 - `rating` - опциональная целочисленная оценка в диапазоне `1..10`.
+- `recommendation` - опциональный маркер рекомендации: `recommended | neutral | not_recommended`.
 - `favorite` - независимый флаг избранного.
 - `archived` - независимый флаг архивирования.
 - `parent_content_id` - опциональная родительская связь.

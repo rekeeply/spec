@@ -40,6 +40,11 @@ weight: 16
   - При задании оценки диапазон значения: `1..10`.
   - Обновляет `updated_at`.
 
+- `set-recommendation`
+  - Устанавливает/меняет/очищает `recommendation`.
+  - Разрешенные значения: `recommended | neutral | not_recommended`.
+  - Обновляет `updated_at`.
+
 - `toggle-favorite`
   - Устанавливает `favorite=true/false`.
   - НЕ ДОЛЖЕН обновлять `updated_at`.

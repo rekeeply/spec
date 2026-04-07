@@ -15,3 +15,7 @@ weight: 21
 - `Preset` is an explicitly persisted search definition.
 - When current search is changed or library session is restarted, previous ephemeral search result is discarded.
 - Only explicitly saved presets remain available across sessions.
+
+## Searchable Dimensions
+
+- Search MUST support structured conditions by `status`, `priority`, `rating`, `recommendation`, `favorite`, `archived`, `content_type`, and `content_subtype`.

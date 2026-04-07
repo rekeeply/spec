@@ -40,6 +40,11 @@ weight: 16
   - Rating value range is `1..10` when provided.
   - Updates `updated_at`.
 
+- `set-recommendation`
+  - Sets/changes/clears `recommendation`.
+  - Allowed values: `recommended | neutral | not_recommended`.
+  - Updates `updated_at`.
+
 - `toggle-favorite`
   - Sets `favorite=true/false`.
   - MUST NOT update `updated_at`.

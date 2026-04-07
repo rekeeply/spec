@@ -29,6 +29,7 @@ weight: 12
 - `status` - `inbox | todo | in_progress | skimmed | done | dropped`.
 - `priority` - `low | medium | high`.
 - `rating` - optional integer rating in range `1..10`.
+- `recommendation` - optional recommendation marker: `recommended | neutral | not_recommended`.
 - `favorite` - independent favorite flag.
 - `archived` - independent archive flag.
 - `parent_content_id` - optional parent relation.
