@@ -8,3 +8,4 @@ weight: 90
 Supplementary materials for the Rekeeply specification.
 
 - [Glossary](glossary/)
+- [Versioning Policy](versioning-policy/)
