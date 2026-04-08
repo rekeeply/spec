@@ -54,6 +54,36 @@ weight: 11
 - `promote` MUST be idempotent for the same `RawItem` and MUST NOT create duplicates on retry.
 - `promote` MUST persist linkage to created library entity (`promoted_content_id` or equivalent origin link).
 
+## Promote Mapping Rules
+
+- `Raw:text`
+  - Default target type: `misc` (or user-selected target type).
+  - `title` is mapped from raw title when available; fallback uses preview/leading text.
+  - `summary` is mapped from text payload.
+
+- `Raw:link`
+  - Default target type: `resource` with default subtype `site`.
+  - `title` is mapped from fetched metadata title; fallback uses host/URL.
+  - `source_url` is mapped from link URL.
+  - `summary` may be mapped from fetched metadata description when available.
+
+- `Raw:mixed`
+  - Default target type: `misc` (or user-selected target type).
+  - `title` mapping follows text mapping rules.
+  - `summary` is mapped from mixed text payload.
+  - If exactly one link exists, it may map to `source_url`; additional links are preserved in related notes/attachments.
+
+- `Raw:file_ref`
+  - Default target type: `resource` with default subtype `document`.
+  - `title` is mapped from file name or URI basename.
+  - File reference is mapped to attachment dataset (`uri`, `name`, `mime`, `size` when available).
+
+## Promote Result State
+
+- Successful promote MUST set `RawItem.status` to `promoted`.
+- Successful promote MUST set or preserve `promoted_content_id`.
+- Repeated promote for same `RawItem` MUST return existing promoted linkage and MUST NOT create duplicate content.
+
 ## Sync Scope
 
 - `Raw` is account-scoped and MUST be synchronized across user devices when sync is enabled.
