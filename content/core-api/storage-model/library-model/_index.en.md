@@ -57,6 +57,7 @@ BookCollapseSection: true
 - [Presets](search-presets/)
 - [Collections](collections/)
 - [Search Behavior](search-behavior/)
+- [Library Lifecycle](library-lifecycle/)
 - [Type-Specific Fields](type-specific-fields/)
 
 ## Non-Goals

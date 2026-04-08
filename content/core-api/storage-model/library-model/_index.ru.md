@@ -57,6 +57,7 @@ BookCollapseSection: true
 - [Пресеты](search-presets/)
 - [Коллекции](collections/)
 - [Поведение поиска](search-behavior/)
+- [Lifecycle библиотеки](library-lifecycle/)
 - [Поля по типам](type-specific-fields/)
 
 ## Что не входит в модель библиотеки
